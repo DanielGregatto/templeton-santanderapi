@@ -14,7 +14,12 @@ namespace UI.API.Configurations
                     {
                         Title = "Santander API",
                         Version = "v1",
-                        Description = "..."
+                        Description = "Returns the best n Hacker News stories by score, sourced live from the public Hacker News API.",
+                        Contact = new OpenApiContact
+                        {
+                            Name = "Daniel Gregatto",
+                            Email = "daniel.gregatto@gmail.com"
+                        }
                     });
 
                 // Include XML comments
