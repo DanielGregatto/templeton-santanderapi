@@ -4,12 +4,6 @@ using Moq;
 using Services.Features.Stories.Queries.GetBestStories;
 using Services.Infrastructure.HackerNews.Models;
 using Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Unit.Tests.Services.Queries.Stories;

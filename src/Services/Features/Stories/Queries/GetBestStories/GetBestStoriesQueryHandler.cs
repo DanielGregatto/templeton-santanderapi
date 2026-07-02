@@ -46,7 +46,7 @@ namespace Services.Features.Stories.Queries.GetBestStories
                 .Cast<HackerNewsItem>()
                 .OrderByDescending(item => item.Score)
                 .Take(request.N)
-                .Select(ToStoryResult)
+                .Select(item => item.ToStoryResult())
                 .ToList();
 
             _logger.LogInformation("Returning {Count} of the requested {Requested} best stories", stories.Count, request.N);
@@ -66,13 +66,5 @@ namespace Services.Features.Stories.Queries.GetBestStories
                 return null;
             }
         }
-
-        private static StoryResult ToStoryResult(HackerNewsItem item) => new(
-            Title: item.Title ?? string.Empty,
-            Uri: item.Url ?? $"https://news.ycombinator.com/item?id={item.Id}",
-            PostedBy: item.By ?? string.Empty,
-            Time: DateTimeOffset.FromUnixTimeSeconds(item.Time),
-            Score: item.Score,
-            CommentCount: item.Descendants);
     }
 }
