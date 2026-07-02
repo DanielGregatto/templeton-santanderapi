@@ -135,5 +135,3 @@ that needed a `UI.API` type would be a circular reference.
 - Inbound rate limiting to protect this API itself from abusive callers (the current caching/throttling
   protects Hacker News, not this API).
 - A `Dockerfile` for containerized deployment.
-- Structured/exportable telemetry (e.g. OpenTelemetry traces, cache hit-ratio metrics) — logging covers
-  reproducing a specific request today, but there's no aggregate view across requests.
