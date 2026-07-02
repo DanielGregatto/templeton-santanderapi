@@ -1,3 +1,5 @@
+[![Build and Test](https://github.com/DanielGregatto/templeton-santanderapi/actions/workflows/dotnet.yml/badge.svg)](https://github.com/DanielGregatto/templeton-santanderapi/actions/workflows/dotnet.yml)
+
 # Hacker News Best Stories API
 
 ASP.NET Core 8 Web API that returns the best *n* Hacker News stories, ranked by score, without
